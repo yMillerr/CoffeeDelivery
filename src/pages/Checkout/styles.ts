@@ -4,9 +4,11 @@ export const CheckoutContainer = styled.div`
   > form {
     max-width: 112rem;
 
+    padding: 1.6rem;
+
     display: grid;
     grid-template-areas:
-      'adress checkout'
+      'address checkout'
       'payment checkout';
     gap: 3.2rem;
     row-gap: 1.2rem;
@@ -18,6 +20,14 @@ export const CheckoutContainer = styled.div`
 
       margin-bottom: 1.5rem;
     }
+
+    @media (max-width: 900px) {
+      grid-template-areas: 
+      'address'
+      'payment'
+      'checkout';
+      row-gap: 3.2rem;
+    }
   }
 `
 
@@ -28,7 +38,7 @@ export const AdressContainer = styled.div`
 
   padding: 4rem;
 
-  grid-area: adress;
+  grid-area: address;
 
   > .adress-title {
     display: flex;
