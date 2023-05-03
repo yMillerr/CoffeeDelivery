@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react'
+import { useContext } from 'react'
 
 import {
   AddresButton,
@@ -19,14 +19,14 @@ export function Header() {
       <img src={logoImg} alt="" />
 
       <ButtonWrapper>
-        <AddresButton href="/">
+        <AddresButton to="/">
           <MapPin size={22} weight="fill" />
             {
               !checkoutData.street || !checkoutData.region  ?  '' : `${checkoutData.street}, ${checkoutData.region}`
             }
         </AddresButton>
 
-        <CartButton href="/checkout">
+        <CartButton to="/checkout">
           <ShoppingCart size={22} weight="fill" />
 
           {coffeesInCart.length > 0 && <span>{coffeesInCart.length}</span>}

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 export const HeaderContainer = styled.div`
   display: flex;
@@ -22,7 +23,7 @@ export const ButtonWrapper = styled.div`
   gap: 1.2rem;
 `
 
-const ButtonsBase = styled.a`
+const ButtonsBase = styled(Link)`
   background: transparent;
 
   padding: 0.8rem;
