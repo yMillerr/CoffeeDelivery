@@ -11,7 +11,7 @@ import {
 import { Minus, Plus, ShoppingCartSimple } from 'phosphor-react'
 import { CoffeeContext } from '../../../../context/CoffeesContext'
 
-import { CoffeProps } from '../../../../context/CoffeesContext'
+import { CoffeProps } from '../../../../reducers/coffees/actions'
 
 interface CoffeeCupProps {
   coffee: CoffeProps
@@ -65,7 +65,7 @@ export function CoffeeCup({ coffee }: CoffeeCupProps) {
         <img src={coffee.coffeeImg} alt="" />
         <TagsContainer>
           {coffee.tags &&
-            coffee.tags.map((tag) => <span key={tag}>{tag}</span>)}
+            coffee.tags.map(tag => <span key={coffee.id}>{tag}</span>)}
         </TagsContainer>
         <h2>{coffee.title}</h2>
         <p>{coffee.description}</p>

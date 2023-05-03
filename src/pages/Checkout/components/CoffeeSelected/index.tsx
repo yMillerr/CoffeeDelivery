@@ -4,7 +4,7 @@ import { ButtonsContainer, ButtonsWrapper, SelectedContainer } from './styles'
 import { Minus, Trash, Plus } from 'phosphor-react'
 import { CoffeeContext } from '../../../../context/CoffeesContext'
 
-import { CoffeProps } from '../../../../context/CoffeesContext'
+import { CoffeProps } from '../../../../reducers/coffees/actions'
 
 interface CoffeeSelectedProps {
   coffee: CoffeProps
