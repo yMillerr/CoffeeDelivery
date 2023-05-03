@@ -1,8 +1,5 @@
 import { createContext, ReactNode, useEffect, useReducer } from 'react'
 
-import latteCoffee from '../assets/coffees-img/coffee-latte.png'
-import tradicionalCoffee from '../assets/coffees-img/coffee-tradicional.png'
-
 import { CheckoutFormDataProps } from '../pages/Checkout'
 import { 
   CoffeProps,
@@ -16,6 +13,7 @@ import {
 } from '../reducers/coffees/actions'
 
 import { CoffeesReducer } from '../reducers/coffees/reducer'
+import { allCoffes } from '../coffees'
 
 interface CoffeeProviderProps {
   children: ReactNode
@@ -54,26 +52,7 @@ export function CoffeesContextProvider({ children }: CoffeeProviderProps) {
     return initialState
   })
 
-  const coffees = [
-    {
-      id: 1,
-      title: 'Latte',
-      description: 'Café com latte',
-      coffeeImg: latteCoffee,
-      tags: ['latte', 'muito bom'],
-      price: 9.99,
-      amount: 1,
-    },
-    {
-      id: 2,
-      title: 'Café tradicional',
-      description: 'Café quetinho',
-      coffeeImg: tradicionalCoffee,
-      tags: ['tradicional'],
-      amount: 1,
-      price: 9,
-    },
-  ]
+  const coffees = allCoffes
 
   const { coffeesInCart, paymentMethod, checkoutData } = coffeesState
 
